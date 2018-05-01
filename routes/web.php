@@ -24,6 +24,24 @@ Route::get('/home', 'HomeController@index')->name('home');
 ///////////////////Admin Routes//////////////////////////////////////////////
 Route::group(['middleware' => ['auth']], function() {
 
+
+    Route::get('/analytics', [
+        'as' => 'analytics.get',
+        'uses' => 'PagesController@analyticsGet'
+    ]);
+
+    Route::get('/partners', [
+        'as' => 'partners.get',
+        'uses' => 'PagesController@partnersGet'
+    ]);
+
+    Route::get('/faqs', [
+        'as' => 'faqs.get',
+        'uses' => 'PagesController@faqsGet'
+    ]);
+
+
+
     //Tickets Management system
 
     Route::get('/tickets/create', [

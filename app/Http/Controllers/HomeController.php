@@ -46,4 +46,7 @@ class HomeController extends Controller
             'weekProfit'=>$weekProfit,
             'todayLeads'=>$todayLeads]);
     }
+
+
+
 }
